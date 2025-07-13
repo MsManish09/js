@@ -1,0 +1,74 @@
+let a = 10;
+
+
+console.log(typeof(a) ,a)
+
+let b = "10";
+
+console.log(a === b) // strict equality, checks the value and datatype (false)
+console.log(a == b) // check the value not the data type (true)
+
+// --------------------------------
+// Variable lecture: 
+const name = "manish"
+const rollno = 10
+let isMajor = true
+let salary;
+let retired = null;
+
+let favColor = ["Black","Blue", "white" ]
+const info = {name : "Manish", city : "Bengaluru"}
+
+console.log("My name is ", name ," and my favorite color is ", favColor)
+console.log("Roll Number: ", rollno)
+console.log("is major? : ",isMajor)
+console.log("Salary: ", salary)
+console.log("Retried? :", retired)
+
+// -----------------------------------------------------------
+
+// Operators lecture: 
+
+a = 10 
+b = 10 
+
+console.log(a + b, a*b, a - b, a/b, a**b, a % b)
+//  comparision operators:
+c= "10"
+console.log(a == b, a == c) //true , true
+console.log(a ===b , a === c) //true, false
+
+
+// Control flow and Logical operators
+marks = 40
+attendence = 78
+
+if (marks >= 35 && attendence >= 75){
+    console.log("Pass")
+}
+
+else{
+    console.log("Fail")
+}
+
+marks = 97
+attendence = 66
+
+if (marks >= 35 || attendence >= 75){
+    console.log("Pass")
+}
+
+else{
+    console.log("Fail")
+}
+// -------------------------------------------------------
+hh = 10
+gg = "10"
+if (hh === gg)
+    {
+        console.log("hh == gg")
+    }
+else{
+    console.log("hh ! gg")
+}
+
