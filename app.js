@@ -103,3 +103,9 @@ while(true){
         break;
     }
 }
+
+count = 0
+do{
+    console.log(`${count + 1}: My name is Manish `)
+    count += 1
+} while(count < 5)
