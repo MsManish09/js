@@ -115,3 +115,19 @@ console.log("")
 for(i = 1; i <= 15; i++){
     console.log(`${i}: My name is manish M S`)
 }
+
+// Program to print 1 - 100 even numbers
+console.log("")
+console.log("Print even number from 1 - 100")
+
+for(i = 2; i <= 100; i +=2){
+    console.log(i)
+}
+
+count = 1
+console.log("")
+console.log("Print odd number from 1 - 100")
+while(count <= 100){
+    console.log(count)
+    count += 2
+}
