@@ -92,3 +92,14 @@ switch  (col){
     default:
         console.log('Favorite color not found...');
 }
+
+let count = 0;
+
+while(true){
+    console.log(count)
+    count += 1
+
+    if(count === 15){
+        break;
+    }
+}
