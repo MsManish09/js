@@ -109,3 +109,9 @@ do{
     console.log(`${count + 1}: My name is Manish `)
     count += 1
 } while(count < 5)
+
+console.log("")
+
+for(i = 1; i <= 15; i++){
+    console.log(`${i}: My name is manish M S`)
+}
