@@ -72,3 +72,23 @@ else{
     console.log("hh ! gg")
 }
 
+//  Switch ________________________________________________
+
+let col = "blue";
+
+switch  (col){
+    case 'red':
+        console.log(`Favorite color is ${col}`);
+        break;
+
+    case 'blue':
+        console.log(`Favorite color is ${col}`);
+        break;
+
+    case 'green':
+        console.log(`Favorite color is ${col}`);
+        break;
+
+    default:
+        console.log('Favorite color not found...');
+}
