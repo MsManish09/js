@@ -131,3 +131,8 @@ while(count <= 100){
     console.log(count)
     count += 2
 }
+
+
+// Generate 6 digit otp
+let otp = Math.floor( (Math.random() * 899999) + 100000 ) 
+console.log( otp )
