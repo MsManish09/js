@@ -121,6 +121,8 @@ console.log( arr2D[1][1] ) // 2nd row, 2nd element
 console.log( arr2D[1][0] ) // 2nd row, 1st element
 
 console.log("--------------------------------------")
+
+
 // 3D arrays --> Array[Array[array]]
 
 let arr_3D = [
@@ -151,7 +153,22 @@ console.log("2nd plane 1st row, 2nd element : " + arr_3D[1][0][1]) // 100
 
 console.log("")
 
-console.log("2nd plane 2nd row, 1st element : " + arr_3D[1][1][0]) // 400
-
+console.log("2nd plane 2nd row, 1st element : " + arr_3D[1][1][0]) // 40
 console.log("2nd plane 2nd row, 2nd element : " + arr_3D[1][1][1]) // 500
 
+// Objects 
+
+console.log("")
+
+let person = {
+    name: 'Manish',
+    age: 24,
+    fav_color: 'Black',
+    isMarried : false
+}
+
+console.log(person)
+console.log(person.age) // prints age value
+console.log(person.name) // Manish
+
+console.log(person["age"]) // 24 , this method is not used to access individual keys in a obj.
