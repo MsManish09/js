@@ -24,3 +24,36 @@ for (let keys in obj){
     console.log(keys)
     console.log(obj[keys])
 } // for (in) used to iterate over objects
+
+
+
+// 3 declaratives...
+
+// var
+var a = 100 // declared yes
+console.log(a)
+
+a = 120 // reassigned | yes
+console.log(a)
+
+var a  = 200 // redeclared and reassigned | yes
+console.log(a)
+
+// let
+
+let b = 100
+console.log(b)
+
+b = 200 // reassigned | yes
+console.log(b)
+
+//  cant do the below, throws a error. cant reassign
+// let b = 120; // redeclared | no
+
+// Const
+
+const c = 100 
+console.log(c)
+
+c = 2500; // cant reassign and redeclare.
+// console.log(c) // error
