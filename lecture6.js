@@ -115,3 +115,27 @@ let latestArrshorthand = newArr.map(item =>
     return item + item
 })
 console.log(latestArrshorthand) // [200, 400, 600, 800, 1000, 1040, 1320, 1420]
+
+
+//  filter()
+
+let arr3 = [ 1, 5, 10, 12, 15, 30, 50, 22 ]
+
+let evenArr = arr3.filter(function( element, index ){
+    if( element % 2 === 0 ) { return true }
+})
+
+console.log( evenArr ) // 10, 12, 30, 50, 22
+
+// find()
+
+let searchEle = 12
+console.log( arr3.find( function( item, indes ){
+    if( item === searchEle ){ return true }
+} ) ) // 12
+
+
+ searchEle = 23
+console.log( arr3.find( function( item, indes ){
+    if( item === searchEle ){ return true }
+} ) ) // undefined
