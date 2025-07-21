@@ -65,3 +65,21 @@ console.log(arr, b) // [70, 60, 80, 10, 20, 30, 40],  length - 7
 r = arr.shift() // remove 1st element for a array and  returns it
 console.log(arr, r) // [60, 80, 10, 20, 30, 40], removed element - 70
 
+// forEach()
+
+let newArr = [100, 200, 300, 400, 500]
+
+newArr.forEach(element => {
+    console.log(element) // 100, 200, 300, 400, 500
+});
+
+newArr.forEach(function(item, index)
+{
+    console.log(`Value: ${item}, at indes: ${index}`)
+    // output
+    // Value: 100, at indes: 0
+    // Value: 300, at indes: 2
+    // Value: 400, at indes: 3
+    // Value: 500, at indes: 4
+    // Value: 200, at indes: 1
+})
