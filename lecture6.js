@@ -65,9 +65,12 @@ console.log(arr, b) // [70, 60, 80, 10, 20, 30, 40],  length - 7
 r = arr.shift() // remove 1st element for a array and  returns it
 console.log(arr, r) // [60, 80, 10, 20, 30, 40], removed element - 70
 
+
+
+
 // forEach()
 
-let newArr = [100, 200, 300, 400, 500]
+let newArr = [100, 200,660, 710, 520, 300, 400, 500]
 
 newArr.forEach(element => {
     console.log(element) // 100, 200, 300, 400, 500
@@ -91,3 +94,24 @@ newArr.forEach(function(item, index){
 })
 
 console.log(arrsum)
+
+// sort
+newArr.sort() // sorts array in ascending order. 
+console.log(newArr) // [100, 200, 300, 400, 500, 520, 660, 710]
+
+
+//  map()
+
+let latestArr = newArr.map(function(item, index)
+{
+    return item + item
+})
+console.log(latestArr) // [200, 400, 600, 800, 1000, 1040, 1320, 1420]
+
+
+// msp() --> shorthand
+let latestArrshorthand = newArr.map(item =>
+{
+    return item + item
+})
+console.log(latestArrshorthand) // [200, 400, 600, 800, 1000, 1040, 1320, 1420]
