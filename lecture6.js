@@ -83,3 +83,11 @@ newArr.forEach(function(item, index)
     // Value: 500, at indes: 4
     // Value: 200, at indes: 1
 })
+
+// sum of arr
+let arrsum = 0
+newArr.forEach(function(item, index){
+    arrsum += item
+})
+
+console.log(arrsum)
