@@ -139,3 +139,23 @@ console.log( arr3.find( function( item, indes ){
 console.log( arr3.find( function( item, indes ){
     if( item === searchEle ){ return true }
 } ) ) // undefined
+
+// some()
+
+console.log( arr3.some( function( item, index ){
+    if(item % 3 === 0){return true}
+} ) ) //  true
+
+console.log( arr3.some( function( item, index ){
+    if(item % 100 === 0){return true}
+} ) ) //  false
+
+// every --> similar to AND opertor, all elements as to satisfy the conditon
+
+console.log( arr3.every( function( item, index ){
+    if(item % 3 === 0){return true}
+} ) ) //  false
+
+console.log( arr3.every( function( item, index ){
+    if(item % 1 === 0){return true}
+} ) ) //  true
