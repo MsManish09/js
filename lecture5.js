@@ -55,5 +55,7 @@ console.log(b)
 const c = 100 
 console.log(c)
 
-c = 2500; // cant reassign and redeclare.
+// c = 2500; // cant reassign and redeclare.
 // console.log(c) // error
+
+// ---------------------------------------------------------------------------
