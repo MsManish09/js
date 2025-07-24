@@ -18,5 +18,35 @@ result() // 100 (a) 300(c)
 // -----------------------------------------------------
 
 
-// Constructors
+// Prototype
 
+function Person( name, age ){
+    this.name= name
+    this.age = age
+    this.greet = function()  {console.log(`hello, ${this.name}`)}
+}
+
+let person1 = new Person('Manish', '24') // constructor fn()
+
+console.log(person1) // Person {name: 'Manish', age: '24', greet: ƒ}
+console.log(person1.salary) // undefined
+
+console.log(person1.length) // length property is not present in m(), but still we can access it, because it is present in Object.prototype and person1 fallbacks on this prototype.
+
+
+console.log(typeof(null))
+let arr = [1, 2, 3]
+console.log( arr.__proto__ == Array.prototype ) // true
+console.log(Array.prototype.__proto__ === Object.prototype) // True
+
+let str = 'manish'
+console.log(typeof(str)) // string
+console.log(str.__proto__ === String.prototype) // True
+console.log(String.prototype.__proto__ === Object.prototype) // true
+
+let num = 20
+console.log(typeof(num)) //number
+console.log(num.__proto__ === Number.prototype) // true
+console.log( num.__proto__.__proto__ === Object.prototype ) // true
+
+// --------------------------------------------------------------------------------
