@@ -34,19 +34,26 @@ console.log(person1.salary) // undefined
 console.log(person1.length) // length property is not present in m(), but still we can access it, because it is present in Object.prototype and person1 fallbacks on this prototype.
 
 
-console.log(typeof(null))
+console.log(typeof(null)) // object
+
 let arr = [1, 2, 3]
 console.log( arr.__proto__ == Array.prototype ) // true
 console.log(Array.prototype.__proto__ === Object.prototype) // True
+// so array is a object
+
 
 let str = 'manish'
 console.log(typeof(str)) // string
 console.log(str.__proto__ === String.prototype) // True
 console.log(String.prototype.__proto__ === Object.prototype) // true
+// so string is a object
+
 
 let num = 20
 console.log(typeof(num)) //number
 console.log(num.__proto__ === Number.prototype) // true
 console.log( num.__proto__.__proto__ === Object.prototype ) // true
+// so number is a object
+
 
 // --------------------------------------------------------------------------------
