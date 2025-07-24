@@ -11,9 +11,12 @@ function m(){
     return n
 }
 
-let result = m()
+let result = m() // n() is returned along with var a, let c. Because n() is depended on var a and let c => Closure.
 
-result()
+result() // 100 (a) 300(c)
+
+// -----------------------------------------------------
 
 
+// Constructors
 
