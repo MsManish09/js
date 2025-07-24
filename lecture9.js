@@ -1,3 +1,5 @@
+/*
+
 function m(){
     var a = 100
     var b = 200
@@ -15,11 +17,13 @@ let result = m() // n() is returned along with var a, let c. Because n() is depe
 
 result() // 100 (a) 300(c)
 
+*/
+
 // -----------------------------------------------------
 
 
 // Prototype
-
+/*
 function Person( name, age ){
     this.name= name
     this.age = age
@@ -55,5 +59,60 @@ console.log(num.__proto__ === Number.prototype) // true
 console.log( num.__proto__.__proto__ === Object.prototype ) // true
 // so number is a object
 
-
+*/
 // --------------------------------------------------------------------------------
+
+// constructors
+
+function Employee(name, age, salary){
+    this.name = name
+    this.age = age
+    this.salary = salary
+
+    this.details = function(){  // Creating a fucntion inside a constructor
+        console.log(`Name: ${this.name}`)
+        console.log(`Age: ${this.age}`)
+        console.log(`Salary: $ ${this.salary}`)
+    }
+}
+
+let emp = new Employee('manish', 24, 254155) 
+console.log(emp) // Employee {name: 'manish', age: 24, salary: 254155, details: ƒ}
+
+emp.details() 
+/*
+Name: manish
+lecture9.js:74 Age: 24
+lecture9.js:75 Salary: $ 254155
+*/ 
+
+// ----------------------------------------------------------
+
+// Classes
+
+class ClassEmployee{
+    constructor(name, age, salary){
+        this.name = name
+        this.age = age
+        this.salary = salary
+    }
+
+    // creating methods inside class
+
+    empDetails(){
+        console.log(`Name: ${this.name}`)
+        console.log(`Age: ${this.age}`)
+        console.log(`Salary: $ ${this.salary}`)
+    }
+}
+
+let employee1 = new ClassEmployee('manish ms', 24, 514848)
+
+console.log(employee1) // ClassEmployee {name: 'manish ms', age: 24, salary: 514848}
+
+employee1.empDetails()
+/*
+Name: manish ms
+lecture9.js:104 Age: 24
+lecture9.js:105 Salary: $ 514848
+*/
