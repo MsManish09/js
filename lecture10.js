@@ -42,19 +42,23 @@ b.details()
 // 'this' keyword usage
 
 
-// 1.
+// 1. Direct function calling
 function aaa(){
     console.log(this)
 }
 aaa() // returns => Window {window: Window, self: Window, document: document, name: '', location: Location, …}
 
 
-// 2.
+// 2. Object calling => points the obj in which the fn with 'this' keyword is present.
 
-function bbb(){
-    // console.log(this)
-    return this
+let ob = {
+    a : 10,
+    b : 'helo',
+    fn : function(){
+        console.log(this) // 'this' points to entire object ({a: 10, b: 'helo', fn: ƒ})
+    }
 }
+ob.fn() // {a: 10, b: 'helo', fn: ƒ}
 
-let newA = new bbb()
-console.log(bbb)
+
+
