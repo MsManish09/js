@@ -61,4 +61,38 @@ let ob = {
 ob.fn() // {a: 10, b: 'helo', fn: ƒ}
 
 
+// 2.a
 
+let ob2 = {
+    a : 10,
+    b : 'helo',
+    fn : function(){
+        function s(){
+            console.log(this) // window => direct fucntion calling
+        }
+
+        s()
+    }
+}
+
+ob2.fn()
+
+
+// 3. Constructor Calling: points to the newly created object.
+
+function newCont(){
+    console.log(this)
+}
+
+let abc = new newCont() // points to object abc
+
+let defg = newCont() // points to object defg
+
+// 4. indirect Calling
+
+
+// 5. Arrow function
+
+const sum = (a, b) => a + b // creating function usin arrow fn.
+
+console.log(sum(10, 5))
