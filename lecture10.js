@@ -87,12 +87,65 @@ function newCont(){
 let abc = new newCont() // points to object abc
 
 let defg = newCont() // points to object defg
+//--------------------------------------------
 
-// 4. indirect Calling
+// 4. indirect Calling  --> call(), apply() and bind()
+
+let hgh ={
+    a : 10,
+    fn : function(x, y){
+        console.log(this.a, x, y)
+    }
+
+}
+
+let hgh2 = {
+    a : 2000
+}
+
+hgh.fn(); // 10 undefined  undefined
+console.log(hgh2.a) // 2000 100 4646
 
 
+hgh.fn.call(hgh2, 100, 4646) // making object hgh refer to object hgh2 => 2000 (this.a in hgh() refers to a = 2000 in hgh2() )
+
+hgh.fn.apply(hgh2,[ 100, 4646]) // making object hgh refer to object hgh2 => 2000 (this.a in hgh() refers to a = 2000 in hgh2() ) --> parameter to be sent as arrays.
+
+let bb = hgh.fn.bind(hgh2,[ 100, 4646])  // copies the fn
+
+bb() // 2000 (2) [100, 4646] undefined
+//  ---------------------------------------------------------
 // 5. Arrow function
 
-const sum = (a, b) => a + b // creating function usin arrow fn.
+// const sum = (a, b) => a + b // creating function usin arrow fn.
 
-console.log(sum(10, 5))
+// console.log(sum(10, 5))
+
+
+// let obj4 = {
+//     a: 10,
+//     a : 23,
+//     fn : () =>{
+//         console.log(this) //f window
+
+//         function abe(){
+//             console.log(this) // window
+//         }
+
+//         abe()
+//     }
+// }
+
+// obj4.fn();
+
+// let obj5 = () =>{
+//         console.log(this) //f window
+
+//          abe : () =>{
+//             console.log(this) // window
+//         }
+
+//         abe()
+//     }
+
+// obj5.abe
