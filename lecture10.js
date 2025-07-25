@@ -1,6 +1,7 @@
 
 //  Inheritance
 
+// Parent Class
 class Person{
     constructor(name, age, gender){
         this.name= name
@@ -18,9 +19,11 @@ class Person{
 let a = new Person('manish', 24 , 'Male')
 a.details()
 
+
+// Child class
 class Employee extends Person{
     constructor(name, age, gender, id){
-        super(name, age, gender)
+        super(name, age, gender) // refering to parent class
         this.id =id
     }
 
@@ -33,3 +36,25 @@ class Employee extends Person{
 let b  = new Employee('manishbrab', 24, 'Male', 54616)
 console.log(b)
 b.details()
+
+// --------------------------------------------------------
+
+// 'this' keyword usage
+
+
+// 1.
+function aaa(){
+    console.log(this)
+}
+aaa() // returns => Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+
+
+// 2.
+
+function bbb(){
+    // console.log(this)
+    return this
+}
+
+let newA = new bbb()
+console.log(bbb)
