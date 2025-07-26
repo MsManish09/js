@@ -1,9 +1,9 @@
 
 // Synchronous : runs line by line
 
-console.log('study start')
-console.log('studing for 1 min')
-console.log('study end')
+// console.log('study start')
+// console.log('studing for 1 min')
+// console.log('study end')
 
 // Asynchronous: 
 
@@ -17,15 +17,24 @@ console.log('study end')
 
 // --------------------------------
 
-console.log('manish')
+// console.log('manish')
+
+// setTimeout(() => {
+//     console.log("hwllo after 4sec")
+// },4000);
+
+// setTimeout(() => {
+//     console.log("hwllo after 2sec")
+// },2000);
+
+// console.log('Bye')
+
+//  timer after '0'
+
+console.log('hello')
 
 setTimeout(() => {
-    console.log("hwllo after 4sec")
-},4000);
+    console.log("hwllo after 0sec")
+},0);
 
-setTimeout(() => {
-    console.log("hwllo after 2sec")
-},2000);
-
-
-console.log('Bye')
+console.log('bye')
