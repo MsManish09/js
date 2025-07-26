@@ -115,6 +115,8 @@ let bb = hgh.fn.bind(hgh2,[ 100, 4646])  // copies the fn
 
 bb() // 2000 (2) [100, 4646] undefined
 //  ---------------------------------------------------------
+
+
 // 5. Arrow function
 
 // const sum = (a, b) => a + b // creating function usin arrow fn.
