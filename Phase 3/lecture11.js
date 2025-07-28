@@ -40,7 +40,7 @@
 // console.log('bye')
 
 
-console.log("-------------------------------")
+// console.log("-------------------------------")
 
 
 // Instagram task using settimeout()
@@ -55,6 +55,7 @@ function SelectingImg(){
 
     setTimeout(() => {
         console.log('image selected');
+        console.log("-------------------------")
         filter("PIC1")
     }, 4000);
 }
@@ -65,6 +66,8 @@ function filter(image){
 
     setTimeout(() => {
         console.log('Filter Added');
+        console.log("-------------------------")
+
         caption(image, "cool filter")
     }, 2000);
 }
@@ -75,6 +78,8 @@ function caption(image, filter){
 
      setTimeout(() => {
         console.log('cation Added');
+        console.log("-------------------------")
+
         Uploading(image, filter, 'cool caption')
     }, 5000);
 }
@@ -84,7 +89,8 @@ function Uploading(img, filter, caption){
     console.log(`uploading ${img} with ${filter} with ${caption}`)
 
     setTimeout(() => {
-        console.log( `${img} uploaded with ${filter} and this ${caption}`);
+        console.log( `${img} uploaded with ${filter} and ${caption}`)
+        console.log("-------------------------")
 
         console.timeEnd("myFunctionExecution"); // code to check amount of time taken to run the instagram task.
     }, 4000);
