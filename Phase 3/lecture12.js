@@ -75,12 +75,10 @@ console.time("myFunctionExecution");
 
 
 posting()
-.then(selImg)
-.catch(selImg)
-.then(addFilter)
-.catch(addFilter)
-.then(addCaption)
-.catch(addCaption)
-.then(uploading)
-.catch(uploading)
+.then(selImg) // receives result of posting() & passes it to addFilter
+
+.then(addFilter) // // receives result of selImg() and passes itto addFilter
+.then(addCaption) // // receives result of addFilter() and passes it to addCaption
+.then(uploading) // receives result of addFilter() and passes it to uploading
+.catch(() => {console.log('Error uploading image to your profile')})
 .finally(() => {console.log(`Image posted in your Instagram`)})
