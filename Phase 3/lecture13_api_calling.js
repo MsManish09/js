@@ -48,9 +48,28 @@ let api = "https://jsonplaceholder.typicode.com/todos/1"
 
 // using async - await
 
+/*
 async function calling() {
     const resp = await axios.get(api)
     console.log(resp.data)
 }
 
 calling()
+
+*/
+
+// -----------------------------------------
+
+// api task - tvmaze
+
+let API = 'https://api.tvmaze.com/search/shows?q=girls'
+
+async function tvmazeApi() {
+    const resp = await axios(API)
+    
+    for(let score of resp.data ){
+        console.log(score.score)
+    }
+}
+
+tvmazeApi()
