@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculation App</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+            /* background-color: rgb(198, 198, 198); */
+        }
+
+        body{
+            background-color: rgb(209, 209, 209);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            /* margin: auto; */
+            height: 100vh;
+            width: 100%;
+        }
+
+        
+
+        /* body{
+            margin: auto;
+            align-items: center;
+            display: block;
+        } */
+        section{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 5%;
+            height: 500px;
+            border-radius: 5px;
+            font-size: larger;
+            align-content: center;
+            justify-content: center;
+            /* margin: auto; */
+            /* text-align: center; */
+            width: 500px;
+            box-shadow: 2px 2px 5px 2px;
+            flex-wrap: wrap;
+            overflow: hidden;
+
+            
+        }
+
+        .tipCalc > label, h3{
+            /* margin-bottom: 20px; */
+            text-align: start;
+            width: 100%;
+        }
+
+        h1{
+            font-size: xx-large;
+            text-decoration: underline;
+        }
+        input, button{
+            width: 100%;
+            height: 2rem;
+            font-size: large;
+            padding: 5px;
+            font-weight: 600;
+        }
+
+        #total, .tot{
+            font-size: larger;
+            font-weight: bolder;
+        }
+    </style>
+
+</head>
+<body>
+
+    <section class="tipCalc">
+
+            <h1 >Tip Calculator</h1>
+
+            <label for="billAmt">Bill Amount:</label>
+            <input type="number" id="billAmt" name="billAmt">
+            <br>
+
+            <label for="tipPer">Tip Percentage:</label>
+            <input type="number" id="tipPer" name="tipPer">
+            <br>
+
+            <button type="button" id="calBut">Calculate</button>
+            <br>
+
+            <label class="tot" for="total">Total: <span id="total" ></span></label>
+            
+
+    </section>
+
+    <script src="tipCal.js"></script>
+</body>
+</html>
