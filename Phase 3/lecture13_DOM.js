@@ -1,5 +1,4 @@
 
-/*
 let eleByTag = document.getElementsByTagName('h1')
 
 console.log(eleByTag)
@@ -28,7 +27,5 @@ setTimeout(() => {
     clearInterval(a) // to stop the setInterval 
 }, 30000);  // after 30s
 
-*/
 
-// image task
 
