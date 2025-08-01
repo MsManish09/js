@@ -17,13 +17,78 @@
             text-decoration: underline;
             text-align: center;
         }
+        
+        .para{
+            border: 2px solid black;
+            padding: 3%;
+            color: yellow;
+            background-color: blue;
+            font-size: larger;
+        }
+
+        .list{
+            padding: 2px;
+            border: 2px solid blue;
+            background-color: aqua;
+            color: rebeccapurple;
+        }
+
+        .items{
+            padding: 5%;
+            border: 2px dotted rebeccapurple;
+            background-color: red;
+            color: yellow;
+            font-size: xx-large;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+
+        .selectedItems{
+            background-color: green;
+            text-decoration: double;
+        }
     </style>
 
 </head>
 <body>
-    <h1>Lecture 14: Understanding  DOM.</h1>
 
+    <h1>Lecture 14: Understanding  DOM.</h1> <!-- Child of body, previous sibling of p  -->
 
+     <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur labore ut consectetur nisi eveniet expedita provident illo sapiente sequi similique inventore, nesciunt quidem quo dolore laudantium corrupti asperiores suscipit dolor.
+     </p> <!-- Child of body, next sibling of h1  -->
+     
+     <section class="mainsection" id="1"> <!-- child of body, next sibling of p -->
+
+        <div class="topic">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, ipsam.</p>
+        </div> <!--child 1 of section, previous sibling of div 2 -->
+
+        <div class="topic">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quo cum aliquam natus ratione corporis id magni ducimus consequuntur ipsum, excepturi sit illo blanditiis quidem voluptate exercitationem. Doloribus, sed explicabo.</p>
+        </div><!--child 2 of section, previous sibling of div 3 , next sibling of div 1 -->
+
+        <div class="topic">
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis saepe recusandae dicta nostrum voluptatum dolorum, corporis exercitationem laboriosam voluptatem vitae ipsa magni dolor, facilis at? Doloribus eveniet libero voluptas voluptatem?
+            </p>
+
+        </div> <!--child 3 of section, next sibling of div 2 -->
+
+     </section>
+
+     <section id="2"> <!-- next sibling of section 1  -->
+
+        <ol id="orderedlist">
+            <li id="list1">tiem 1</li> <!--child of ol, previous sibling of list2  -->
+            <li id="list2">item 2</li><!--child of ol, previous sibling of list3, next sib of list1   -->
+            <li id="list3">item 3</li><!--child of ol,  previous sibling of list4, next sib of list2  -->
+            <li id="list4">item 4</li><!--child of ol, next sib of list3  -->
+        </ol>
+
+        
+     </section>
 
     <script src="lecture14_DOM.js"></script>
 </body>
