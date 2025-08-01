@@ -46,12 +46,14 @@ for(let items of listItems){
     items.classList.toggle('items')
 }
 
-console.log(ol)
-console.log(ol.parentElement)
+// console.log(ol)
+// console.log(ol.parentElement)
 
 let listItem_1 = document.querySelector('#list1')
-console.log(listItem_1)
+// console.log(listItem_1)
 
+
+/*
 console.log(listItem_1.parentElement) //ol#orderedlist.list.txt_dec
 
 console.log(listItem_1.parentElement.childElementCount) //4
@@ -68,6 +70,36 @@ console.log(listItem_1.nextElementSibling.nextElementSibling) // li#list3.items
 
 console.log(listItem_1.parentElement.parentElement) // section#2
 
+
+*/
+
+
 listItem_1.nextElementSibling.classList.toggle('selectedItems') // item 2 , class changes
 
 listItem_1.nextElementSibling.nextElementSibling.nextElementSibling.classList.toggle('selectedItems') // item 4, class changed
+
+
+// -----------------DOM Tree : End ---------------------------
+
+
+// -------------------- Creating new Element using DOM --------------
+
+// document.createElement()
+
+let ollist = document.querySelector('ol')
+
+let item5 = document.createElement('li')
+// console.log(item5, "before")
+
+item5.innerHTML = "Item 5"
+// console.log(item5, 'After')
+
+ollist.append(item5) // add item5 to the unorder list
+item5.classList.add('items')
+
+let item0 = document.createElement('li')
+item0.innerHTML = "Item0"
+
+ollist.prepend(item0) // add item0 athat the top.
+
+item0.classList.add('selectedItems')
