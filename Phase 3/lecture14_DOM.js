@@ -73,6 +73,7 @@ console.log(listItem_1.parentElement.parentElement) // section#2
 
 */
 
+/*
 
 listItem_1.nextElementSibling.classList.toggle('selectedItems') // item 2 , class changes
 
@@ -97,9 +98,19 @@ item5.innerHTML = "Item 5"
 ollist.append(item5) // add item5 to the unorder list
 item5.classList.add('items')
 
-let item0 = document.createElement('li')
-item0.innerHTML = "Item0"
+let item0 = document.createElement('li') // new item creation.
+item0.innerHTML = "Item0" // adding text to the item
 
 ollist.prepend(item0) // add item0 athat the top.
 
 item0.classList.add('selectedItems')
+
+
+*/
+
+
+// --------------------- Events -----------------------
+
+
+// action --> Reaction
+

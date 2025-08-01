@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Rotating List Items</title>
+    <style>
+        body {
+            background-color: rgb(134, 177, 177);
+            padding: 2%;
+            border: 2px solid red;
+            text-align: center;
+        }
+
+        .header {
+            color: rgb(14, 14, 207);
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        li {
+            padding: 2%;
+            border: 2px solid black;
+            font-size: x-large;
+            margin-bottom: 2%;
+            transition: background-color 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task: Changing the element color using setTimeout and setInterval and DOM</h1>
+
+    <section id="section1">
+        <ul id="un_od_list">
+            <li id="item1">ITEM 1</li>
+            <li id="item2">ITEM 2</li>
+            <li id="item3">ITEM 3</li>
+            <li id="item4">ITEM 4</li>
+            <li id="item5">ITEM 5</li>
+        </ul>
+    </section>
+
+    <script>
+        const list = document.querySelector('#un_od_list');
+        const items = list.children;
+        const colorArr = ['red', 'green', 'blue'];
+
+        let offset = 0;
+
+        function applyColors() {
+            for (let i = 0; i < items.length; i++) {
+                items[i].classList.remove('red', 'green', 'blue');
+                const color = colorArr[(i + offset) % colorArr.length];
+                items[i].classList.add(color);
+            }
+            offset++;
+        }
+
+        applyColors(); // Initial call
+        const id = setInterval(applyColors, 3000);
+
+        setTimeout(() => {
+            clearInterval(id);
+        }, 30000);
+    </script>
+</body>
+</html>
