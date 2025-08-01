@@ -49,3 +49,33 @@ function freeze(){
 red1.onclick = turnBlood
 green1.onclick = turnGreen
 blue1.onclick = freeze
+
+// task end -------------------------------------------
+
+
+// 3rd way:
+
+let  p = document.querySelector('p')
+
+let icecream = () =>{console.log('Ice Cream')}
+let cake = () => {console.log('Chocolate Cake')}
+
+p.addEventListener('click', icecream)
+p.addEventListener('click', cake)
+// both event are executed
+
+
+// for input events
+
+let intEl = document.querySelector('input')
+
+// intEl.addEventListener('input', (event)=>{
+//     console.log(event)
+//     console.log(event.target) // .target:  one of the methods to know what triggered it.
+//     console.log(event.target.value = "default value") // to access the value., ='default value' is to set default value, cant seen on the screen
+// })
+
+
+intEl.addEventListener('keydown', (e)=>{
+    console.log(e.target.value) // using downkey.
+})
