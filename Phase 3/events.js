@@ -79,3 +79,5 @@ let intEl = document.querySelector('input')
 intEl.addEventListener('keydown', (e)=>{
     console.log(e.target.value) // using downkey.
 })
+
+// -----------------------------------------------------
