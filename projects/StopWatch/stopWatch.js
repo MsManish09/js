@@ -18,15 +18,19 @@ function stopWatch(){
 
 
 startBt.addEventListener('click', ()=>{
+
     if (timer == null){
         timer = setInterval(stopWatch, 1000)
     }
+
 } )
 
 
 pauseBt.addEventListener('click', ()=>{
+
     clearInterval(timer)
     timer = null
+    
 })
 
 resetBt.addEventListener('click', ()=>{
