@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecom Promise Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Ecom promise task.</h1>
+
+    <section class="user_validation">
+
+        <div class="inputbox">
+            <label for="username" class="validation_ele" id="name">Enter Registred UserName: </label>
+            <input type="text" name="username" id="username">
+        
+        </div>
+        <div class="inputbox">
+            <label for="userpassword" class="validation_ele" id="password">Enter your password: </label>
+            <input type="password" name="userpassword" id="userpassword">
+        </div>
+
+        <button id="login" class="validation_ele">Login</button>
+    </section>
+
+    <section class="hidden" id="itemsss">
+
+        <div id="itemName">
+            <label for="name">Enter Item Name: </label>
+            <input type="text" name="name" id="name">
+        </div>
+
+        <div id="itemPrice">
+            <label for="price">Enter Item Price: </label>
+            <input type="number" name="price" id="price">
+        </div>
+
+        <button id="order">Order</button>
+    </section>
+
+
+    <section id="final_message" class="hidden">
+        <h4 id="message"></h4>
+    </section>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
