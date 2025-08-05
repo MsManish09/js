@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 1rem;
+    text-align: center;
+}
+
+.cells{
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(orange 0%,
+    orange 34%,
+    white 34%,
+    white 67%,
+     green 67%,
+     green 100%);
+    margin: 2rem;
+    border:1px solid blue;
+}
+
+.cells:hover{
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.5);
+    background:radial-gradient(green 0%, green 25%, white 25%,white 50%, orange 50%, orange 100%);
+    border: 1px solid blue;
+    border-radius: 50%;
+}
+

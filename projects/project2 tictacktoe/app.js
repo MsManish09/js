@@ -18,7 +18,7 @@ for (let cell of cells){
 
 let circleTurn = false
 
-function handleClick(e){
+function handleClick(e){  // e -> cell clicked details
 
     // 1. mark the symbol. x, o
     let clickedCell = e.target // e.target tells which cells was clicked
