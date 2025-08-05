@@ -1,5 +1,7 @@
 
 let api = 'https://dummyjson.com/comments'
+// let api_result;
+let comment_section = document.querySelector('#comments')
 
 // fetch(api)
 // .then((res)=> res.json())
@@ -12,9 +14,25 @@ let api = 'https://dummyjson.com/comments'
 async function api_calling() {
     let res = await axios.get(api)
     res = await res.data
-    for (let comment of res.comments){
-        console.log(comment.body)    
-    }
-}
+    
+    // for(let comment of res.comments){
+    //     console.log(comment.user.username,': ', comment.body)
+    // }
 
+    
+    for(let comment of res.comments){
+        let cmt = document.createElement('p') //creating p element for displaying comments.
+
+        cmt.classList.add('cmt') // adding clss to comments
+
+        cmt.innerHTML = `<strong>${comment.user.username}
+        :</strong>${comment.body}` // adding usernames and comments inside the <p>
+
+        comment_section.append(cmt) // add comments inside the section
+    }
+
+   
+}
 api_calling()
+
+
