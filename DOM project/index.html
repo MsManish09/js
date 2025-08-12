@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Managment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div id="navbar">
+            <nav>
+                <a href="#navbar"><p id="logo">Fictional Ivy University</p></a>
+            </nav>
+        </div>
+        <h1 id="heading">Student Managment System</h1>
+        <p id="desc">This Student Management System allows you to register new students by entering their details 
+    such as name, ID, email, contact number, and course. Registered students are displayed in a 
+    structured table for easy viewing.</p>
+    </header>
+    
+    
+    <section id="managment_system">
+
+        <div id="container">
+            <section class="system_items"   id="student_data">
+
+                <h2 style="text-align: center;">Add new student detail</h2>
+
+                <form action="" method="">
+
+                    <div class="form_ele">
+                            <label for="name">Enter Student Name:</label>
+                            <input type="text" name="name" id="name" required>
+                    </div>
+
+                    <div class="form_ele">
+                            <label for="std_id">Enter Student ID: </label>
+                            <input type="text" name="std_id" id="std_id" required>
+                    </div>
+
+                    <div class="form_ele">
+                            <label for="email_id">Enter Student email Id: </label>
+                            <input type="email" name="email_id" id="email_id" required>
+                    </div>
+
+                    <div class="form_ele">
+                            <label for="contact_no">Enter Student contact No: </label>
+                            <input type="number" name="contact_no" id="contact_no" required>
+                    </div>
+
+                    <div class="form_ele">
+                            <label for="registered_course">Registered Course: </label>
+                            <select name="registered_course" id="registered_course" required>
+                                <option value="CS">Computer Science</option>
+                                <option value="MECH">Mechanical eng</option>
+                                <option value="ECE">Electronic eng</option>
+                                <option value="MBA">MBA</option>
+                                <option value="other">other</option>
+                             </select>
+                    </div>
+
+                    <div class="form_ele">
+                        <button id="add_student_btn">Add</button>
+
+                        <button id="edit">Edit</button>
+                    </div>
+                </form>
+     
+            </section>
+
+            <div id="edit_page " class="hidden " ></div>
+
+            <section class="system_items" id="studenta_lists">
+                <h2 style="text-align: center;">Resigestered Students: </h2>
+
+                <div class="display">
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th id="sl">S.No</th>
+                                <th id="student_name">Name</th>
+                                <th id="student_id">ID</th>
+                                <th id="student_email">Email</th>
+                                <th id="reg_course">Course Registered</th>
+                            </tr>
+                        </thead>
+                        <tbody id ='table_data_body'>
+
+                        </tbody>
+                    </table>
+                    <button id="delete_student" style="background-color: rgb(209, 91, 91); color: white;">Delete</button>
+
+                </div>
+            </section>
+         </div> 
+    </section>
+
+    
+
+
+    <script src="app.js"></script>
+</body>
+</html>

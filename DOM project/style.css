@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg: #f1f5f9;       /* light grey-blue */
+    --primary-color: #0d9488;    /* teal */
+    --accent-color: #83c3ae;     /* coral pink */
+    --text-color: #092975;       /* dark navy */
+}
+
+body{
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+#navbar{
+    background-color: var(--primary-color);
+    color: white;
+    padding: .3rem;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    font-size: 25px;
+    font-family: cursive;
+    font-weight: 900;
+    color: lightgoldenrodyellow;
+    font-style: oblique;
+    text-decoration: underline;
+}
+
+#logo:hover{
+    transform: scale(1.2);
+}
+
+#heading{
+    font-size: 2rem;
+    padding: .3rem;
+    text-align: center;
+    margin-top: .5rem;
+    color: var(--primary-color);
+    text-decoration: underline;
+    
+}
+
+#desc{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    margin-top: 1rem;
+    font-size: large;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    /* height: 80vh; */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.system_items{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 80vh;
+    margin-top: 1rem;
+    border: 2px solid var(--primary-color);
+    padding-bottom: 1rem;
+    overflow: auto;
+}
+
+form{
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    font-weight: 500;
+    justify-content: start;
+    align-items: center;
+    padding: .5rem;
+}
+
+.form_ele{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    color: var(--text-color);
+}
+
+input, select, button{
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 2rem;
+    min-width: 400px;
+    width: 90%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    padding-left: .5rem;
+    background-color:  #e4f4ef;  ;
+    color: var(--text-color);
+
+}
+
+button{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: 2.5rem; 
+    padding: 0 1rem;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: var(--primary-color);  
+    color: white;
+}
+
+h2{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: .5rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 2%;
+    margin: 0;
+}
+
+ 
+ #studenta_lists{
+    max-height: 80vh;
+ }
+
+ .display{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+table{
+    width: 100%;
+    overflow: auto;
+    border-collapse: collapse;
+    max-width: 100%;
+}
+
+
+ th, td{
+    border: 1px solid var(--primary-color);
+    padding: 8px;
+    text-align: left;
+ }
+
+ th{
+    background-color: var(--accent-color);
+}
+
+#delete_student:hover{
+    background-color: rgb(38, 222, 99);
+}
+
+
+
+.hidden{
+    display: none;
+}
+
+
+
+
+
+/* for smaller screen */
+
+@media (max-width: 640px) {
+#container{
+    flex-direction: column;
+}
+
+#border{
+    display: none;
+}
+
+.system_items{
+    width: 90%;
+    margin-top: 1rem;
+}
+
+input, select, button{
+    min-width: unset;
+    width: 250px;
+}
+form{
+    margin: auto;
+}
+
+}
+
+
+
+/* for tabs */
+@media (min-width: 641px) and (max-width: 1024px ) {
+
+#container{
+    flex-direction: column;
+}
+
+#border{
+    display: none;
+}
+
+.system_items{
+    display: flex;
+    width: 90%;
+    font-size: xx-large; 
+    /* height: auto;  */
+}
+
+h2{
+    font-size: xx-large;
+    padding: 1.2rem;
+}
+
+form{
+    margin: auto;
+    font-size: xx-large;
+}
+
+
+input, select, button{
+
+    font-size: 1.7rem;
+    padding: 2rem;
+   
+}
+
+
+}
