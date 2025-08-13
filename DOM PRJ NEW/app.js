@@ -35,10 +35,29 @@ add_btn.addEventListener('click', ()=>{
         return
     }
 
+    // making sure name as only letters, no numbers and symbols
+    if(!/^[A-Za-z\s]+$/.test(std_name)){
+        alert('Student name can only have letters, no numbers and sybmols')
+        return
+    }
+
+    //validating email address
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(std_email)){
+        alert('Enter a valid email address')
+        return
+    }
+
+    // make sure contack number is 10 digits
+    if (std_contact.length !== 10) {
+    alert('Contact number must be at least 10 digits.');
+    return;
+    }
+
     // if id is already present, dont add student, show alert message and reload the page
     if(localStorage.getItem(std_id) !== null){
         alert('student ID already exist')
-        location.window.reload()
+        document.querySelector('#std_id').value = '';
+        return;
     }
     // if(ids.includes(std_id)){
     //     alert('student ID already exist.')
