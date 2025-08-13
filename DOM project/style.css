@@ -12,6 +12,7 @@
 }
 
 body{
+    position: absolute;
     background-color: var(--primary-bg);
     color: var(--text-color);
     margin-bottom: 2rem;
@@ -176,8 +177,16 @@ table{
     background-color: var(--accent-color);
 }
 
+#delete_student{
+    background-color: rgb(209, 91, 91);
+    color: var(--text-color);
+    /* position: fixed; */
+    
+}
+
 #delete_student:hover{
-    background-color: rgb(38, 222, 99);
+    background-color: rgb(240, 35, 35);
+    color: var(--primary-bg);
 }
 
 
@@ -186,6 +195,16 @@ table{
     display: none;
 }
 
+.delete_panel{
+    position: relative;
+    display: flex;
+  
+    top: 20vh;
+    left: 10vw;
+    height: 60vh;
+    width: 80vw;
+    background-color: #092975;
+}
 
 
 

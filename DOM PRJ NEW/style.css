@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    color: #2D2D4D;
+
+}
+
+/* main{
+    display: flex;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+} */
+
+#navBar{
+    /* text-align: center; */
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    background-color: #2D2D4D;
+    color: lightgoldenrodyellow;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#navBar > h1:hover{
+    transform: scale(1.2);
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    /* background-color: aliceblue; */
+    width: 90%;
+    margin: auto;
+    font-size: 1.1rem;
+    /* height: 15vh; */
+    /* overflow: auto; */
+}
+
+#about_desc{
+    margin-top: 1rem;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 96%;
+    margin: auto;
+    /* height: 70vh; */
+    /* background-color: #f0f8ff; */
+    gap: 2rem;
+    padding: 1rem;
+
+}
+
+#add_student{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2D2D4D;
+    align-items: center;
+    /* height: 70vh; */
+    /* min-width: 400px; */
+    flex-wrap: wrap;
+    overflow: auto;
+    color: lightgoldenrodyellow;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+#std_display{
+    height: 70vh;
+    /* min-width: 400px; */
+    background-color:  #e8e8e8;
+    /* overflow-y: auto; */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+form{
+    display: block;
+    padding: 2rem;
+    margin: auto;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.form_ele{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    /* height: 2rem; */
+}
+
+input, select{
+    height: 2rem;
+    width: 200px;
+    padding: .3rem;
+    margin-top: .5rem;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+}
+
+button{
+    background-color: lightgoldenrodyellow;
+    font-size: larger;
+    padding: .3rem;
+    width: 5rem;
+    color: #2D2D4D;
+    font-weight: bold;
+}
+
+button:hover{
+    transform: scale(1.2);
+    background-color: rgb(247, 247, 175);
+}
+
+/* display table style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background-color: #ffffff; 
+    /* max-height: 60vh; */
+    overflow: auto;
+}
+
+/* Header Row */
+
+thead {
+    background-color: #2D2D4D; 
+    color: lightgoldenrodyellow; 
+}
+
+thead th {
+    padding: 0.7rem;
+    font-size: 1.1rem; 
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid lightgoldenrodyellow;
+}
+
+tbody tr {
+    background-color: lightgoldenrodyellow; 
+    color: #2D2D4D;
+}
+
+tbody tr:hover {
+    background-color: rgb(198, 224, 233); 
+}
+
+tbody td {
+    padding: 0.7rem;
+    text-align: left;
+    border: 1px solid rgb(180, 180, 180); 
+}
+
+/* delete and edit buttons */
+
+#del_edit_btns{
+    display: flex;
+    justify-content: center;
+}
+
+#del_edit_btns button{
+    width: auto;
+    height: auto;
+    padding: .3rem;
+    margin:1rem;
+    margin-top: .3rem;
+}
+
+#del:hover{
+    background-color: rgb(209, 71, 71);
+    color: lightgoldenrodyellow;
+}
+
+/* styling edit panel */
+#edit_panel{
+    width:90vw;
+    max-height: 90vh;
+    background-color: lightgoldenrodyellow;
+    /* opacity: 100%; */
+    z-index: 1;
+    top:3%;
+    left: 5%;
+    position: fixed;
+    color: #2D2D4D;
+    font-size:  larger;
+    padding: 1rem; 
+}
+
+.edit_inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding:2rem;
+}
+
+/* styling delete panel */
+#delete_panel{
+    width: 60vw;
+    height: 60vh;
+    background-color: #985757;
+    opacity: 95%;
+    z-index: 1;
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    /* font-size: xx-large; */
+    color: white;
+    padding: 2rem;
+}
+
+#label_txt{
+    font-size: xx-large;
+}
+
+.get_del_std_id, .display_del_std{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    /* background-color: aliceblue; */
+    height: 100%;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.display_del_std{
+    align-items: start;
+    /* background-color: #985757; */
+    font-size: 1rem;
+}
+
+.disp_ele{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.strip{
+    height: 2rem;
+    min-width:250px;
+    background-color: #e8e8e8;
+    margin-left: 1rem;
+    /* padding: .2rem; */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* for smaller screens */
+@media (max-width:768px ) {
+
+    #delete_panel{
+        flex-direction: column;
+        width: 80vw;
+        height: 60vh;
+        left: 10vw;
+        top: 5vh;
+    }
+   
+    #container {
+        grid-template-columns: 1fr; 
+        height: auto;
+        padding: 1rem;
+    }
+
+    #add_student, #std_display {
+        min-width: 100%; 
+    }
+
+    .form_ele{
+    /* display: flex; */
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-items: start;
+        margin-bottom: 2.5rem;
+        /* height: 2rem;  */
+        font-size: 1rem;
+    }
+
+     input, select {
+        width: 100%;
+        padding: 0.6rem;
+        font-size: 1rem;
+    }
+
+    select{
+        padding: 0;
+    }
+
+    button{
+        font-size: 1.2rem;
+        margin-top: .5rem;
+        width: auto;
+        padding: .3rem;
+    }
+
+    .edit_form_ele{
+        font-size: 1rem;
+    }
+
+    /* .hidden{
+         display: none;
+    } */
+   
+}
+
+/* for tab */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #container {
+        grid-template-columns: 1fr; 
+        height: auto;
+    }
+     #add_student, #std_display {
+        min-width: 100%; 
+    }
+
+    .edit_form_ele{
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    /* height: 2rem; */
+    }
+
+    #std_confirm_btn{
+        width: auto;
+        margin-top: 1rem;
+    }
+
+    .edit_inputs{
+        /* width: 40%; */
+        margin: 2rem;
+    }
+    #edit_panel{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+        justify-content:start;
+        align-items: center;
+        border: 2px solid #2D2D4D;
+        overflow: auto;
+    }
+
+    /* .hidden{
+         display: none;
+    } */
+
+    #delete_panel{
+        flex-direction: column;
+        width: 80vw;
+        height: 60vh;
+        left: 10vw;
+        top: 5vh;
+        justify-content: start;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1025px) {
+        .edit_form_ele{
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        /* height: 2rem; */
+    }
+
+    #edit_panel{
+
+        display: flex;
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #std_confirm_btn{
+        width: auto;
+        margin-top: 1rem;
+    }
+    .new_details{
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+        /* background-color: #e8e8e8; */
+    }
+
+    .new_details h3{
+        font-size: xx-large;
+    }
+
+    /* .hidden{
+         display: none;
+    } */
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+
+

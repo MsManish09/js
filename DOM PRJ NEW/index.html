@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Managment System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <nav id="navBar">
+            <h1>Frictional Ivy University</h1>
+        </nav>
+
+        <div class="about">
+            <h1 id="about_title">Student Management system</h1>
+            <p id="about_desc">
+                This Student Management System lets you register students by entering their name, ID, email, contact, and course. Registered students appear in a structured table. You can also edit existing details or delete student records as needed.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <!-- delete panel : mostly hidden, active only when edit button is pressed -->
+         <div class= "hidden" id="delete_panel" >
+            <div class="get_del_std_id">
+                <label for="delete_std_id" ><span id="label_txt">Enter Student id:</span></label>
+                <input type="text" name="delete_std_id" id="delete_std_id">
+                <button  id="get_del_student" style="width: auto; height: auto; padding: .3rem; margin-top: .3rem;">Get Student</button>
+            </div>
+
+            <div class="display_del_std">
+                <div class="disp_ele">
+                    <h3>Name: </h3>
+                    <h3 id="del_std_name" class="strip"></h3>
+                </div>
+                <div class="disp_ele">
+                    <h3>Email: </h3>
+                    <h3 id="del_std_email" class="strip"></h3>
+                </div>
+                <div class="disp_ele">
+                    <h3>Course: </h3>
+                    <h3 id="del_std_course" class="strip"></h3>
+                </div>
+                <div class="disp_ele">
+                    <h3>ID: </h3>
+                    <h3 id="del_std_id" class="strip"></h3>
+                </div>
+                <div class="disp_ele">
+                    <h3>Contact No: </h3>
+                    <h3 id="del_std_contact_no" class="strip"></h3>
+                </div>
+                <div class="disp_ele">
+                    <button id="confirm_del">Delete</button>
+                </div>
+            </div>
+        </div>
+        <!-- edit panel : mostly hidden, active only when edit button is pressed -->
+        <div class= "hidden" id="edit_panel" >
+            <div class="edit_inputs">
+                <label for="edt_std_id">Enter student id: </label>
+                <input type="text" name="edt_std_id" id="edt_std_id">
+                <button id="std_confirm_btn" style="background-color: #2D2D4D; color: lightgoldenrodyellow;">Get Student</button>
+            </div>
+
+            <div class="new_details">
+                <h3 style="text-align: center; text-decoration: underline;">Enter New details here:</h3>
+                <form action="">
+                        <div class="edit_form_ele">
+                            <label for="new_std_name">Student Name: </label>
+                            <input type="text" name="new_std_name" id="new_std_name" required>
+                        </div>
+
+                        <div class="edit_form_ele">
+                            <label for="new_std_email">Student Email: </label>
+                            <input type="email" name="new_std_email" id="new_std_email" required>
+                        </div>
+
+                        <div class="edit_form_ele">
+                            <label for="new_reg_course">Registered Course </label>
+                            <select name="new_reg_course" id="new_reg_course" required>
+                                <option value="CS">Computer Science</option>
+                                <option value="Mech">Mechanical Engineering</option>
+                                <option value="ECE">Electronic Engineering</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+
+                        <div class="edit_form_ele">
+                            <label for="new_std_id">Student ID: </label>
+                            <input type="text" name="new_std_id" id="new_std_id" required>
+                        </div>
+
+                        <div class="edit_form_ele">
+                            <label for="new_std_no">Student Contact No: </label>
+                            <input type="text" name="new_std_no" id="new_std_no" required>
+                        </div>
+
+                        <div style="display: flex; justify-content: center;">
+                            <button id="update_btn" class="hidden" style="width: auto;background-color: #2D2D4D;color: lightgoldenrodyellow;">Update</button>
+                        </div>       
+            </div>
+        </div> 
+        <section id="container">
+            <section id="add_student">
+                <h2 style="text-decoration: underline;">Add new student details</h2>
+                <div class="form">
+                    <form action="">
+                        <div class="form_ele">
+                            <label for="std_name">Student Name: </label>
+                            <input type="text" name="std_name" id="std_name" required>
+                        </div>
+
+                        <div class="form_ele">
+                            <label for="std_email">Student Email: </label>
+                            <input type="email" name="std_email" id="std_email" required>
+                        </div>
+
+                        <div class="form_ele">
+                            <label for="std_id">Student ID: </label>
+                            <input type="text" name="std_id" id="std_id" required>
+                        </div>
+
+                        <div class="form_ele">
+                            <label for="std_no">Student Contact No: </label>
+                            <input type="text" name="std_no" id="std_no" required>
+                        </div>
+
+                        <div class="form_ele">
+                            <label for="reg_course">Registered Course </label>
+                            <select name="reg_course" id="reg_course" required>
+                                <option value="CS">Computer Science</option>
+                                <option value="Mech">Mechanical Engineering</option>
+                                <option value="ECE">Electronic Engineering</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+
+                        <div style="display: flex; justify-content: center;">
+                            <button id="add_std">Add</button>
+                        </div>                        
+                    </form>
+                </div>
+                
+            </section>
+            <section id="std_display">
+                <h2 style="text-align: center; padding: .7rem; text-decoration: underline; font-size: 1.5rem; ">Registered Students.</h2>
+
+                <div class="display_table" style="overflow: auto; max-height: 57vh;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sl</th>
+                                <th>Name</th>
+                                <th>ID</th>
+                                <th>Email</th>
+                                <th>Registered Course</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+                </div>
+                <div id="del_edit_btns">
+                    <button id="del">Delete Student</button>
+                    <button id="edt">Edit Student Data</button> 
+                </div>
+            </section>
+        </section>
+        
+    </main>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

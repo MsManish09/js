@@ -1,6 +1,5 @@
 class Student{
-    constructor(sl,name, id, email, reg_course, contact_no){
-        this.sl = sl
+    constructor(name, id, email, reg_course, contact_no){
         this.name = name
         this.id = id
         this.email = email
@@ -19,6 +18,8 @@ class Student{
     // }
 }
 
+const ids= []
+
 const registered_studends_list = [] // store all student object in a array
 let sl = 0 //  number of registred students count.
 
@@ -28,7 +29,9 @@ add_btn.addEventListener('click', add_student)
 
 function add_student(event){
     sl += 1 // update count
-    event.preventDefault(); // to prevetn window refresh.
+
+    event.preventDefault();   // to prevetn window refresh.
+   
 
     let name = document.querySelector('#name').value
     let student_id = document.querySelector('#std_id').value
@@ -38,19 +41,24 @@ function add_student(event){
 
     // if any of the input field is empty, doesnot create the student object
     if (!name || !student_id || !email || !contact_no || !reg_course) {
-        // alert("Error: All fields must be filled out before submitting.");
+         alert("Error: All fields must be filled out before submitting.");
         return; // stop from creating the student object.
     }
     
     
-    let student = new Student(sl, name, student_id, email, reg_course,  contact_no) // create individual student objecct
+    // dont add studetn if id already exist
+    if(ids.includes(student_id)){
+        alert('student id already exist.')
+        location.window.reload()
+    }
+
+    ids.push(student_id)
+    
+    let student = new Student(name, student_id, email, reg_course,  contact_no) // create individual student objecct
 
     localStorage.setItem(student_id, JSON.stringify(student)) // store student object in local storage
 
-
-    // registered_studends_list.push(student); // add present student object to a array.
-
-    // student.display() // displays registred students data
+   
 
     // display registered student
     display_students_data()
@@ -72,20 +80,36 @@ function clearInputs(){
 // function to display localStorage data 
 
 function display_students_data(){
-    for(let i = 0; i < localStorage.lengt; i++){
-        let key = localStorage.key(i)
-        let student = JSON.parse(localStorage.getItem(key))
 
-        let table_body = document.querySelector('#table_data_body')
+    // select table body
+    let table_body = document.querySelector('#table_data_body');
+    table_body.innerHTML = '' // empty the table body to add new rows
+
+    for(let i = 0; i < localStorage.length; i++){
+        let key = localStorage.key(i)
+
+        // my broswer was automatically creating these key-value in localStorage, so i'm using if statment to ignore those values.
+        if(key === 'i18nextLng' || key === 'debug'){
+            continue
+        }
+
+        let student = JSON.parse(localStorage.getItem(key))
 
         let row = document.createElement('tr')
 
-        row.innerHTML = `<tr><td>${student.sl}</td><td>${student.name}</td><td>${student.id}</td><td>${student.email}</td><td>${student.course}</td></tr>`;
+        row.innerHTML = `
+        <td>${i}</td>
+        <td>${student.name}</td>
+        <td>${student.id}</td>
+        <td>${student.email}</td>
+        <td>${student.course}</td>`;
+
         table_body.appendChild(row)
     }
 
 }
 
+window.addEventListener('DOMContentLoaded', display_students_data);
 
 
 
